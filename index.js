@@ -154,35 +154,83 @@ const db = {
             qty: 4,
             tmark: "Genius"
         },
-        {
-            id: 16,
-            name: "Parlante SP-HF200",
-            img: "../img/products/f1.jpg",
-            price: 18000,
-            qty: 6,
-            tmark: "Genius"
-        }
     ]
 }
 const shoppingCart = {
     items: JSON.parse(localStorage.getItem('shoppingCart')) || [],
     methods: {
-        add:()=>{},
-        remove:()=>{},
-        count:()=>{},
-        get:()=>{},
-        getTotal:()=>{},
-        hasInventory:()=>{},
-        purchase:()=>{},
-    },
+        add:(id, qty)=>{
+            const cartItem = shoppingCart.methods.get(id);
+            
+            if(cartItem){
+                if(shoppingCart.methods.hasInventory(id, qty + cartItem.qty)){
+                    cartItem.qty += qty;
+                }else{
+                    alert('No hay productos suficientes');
+                }
+            }else{
+                shoppingCart.items.push({id, qty});
+            }
+            saveLocal();
+        },
+        remove:(id, qty)=>{
+            const cartItem = shoppingCart.methods.get(id);
+
+            cartItem.qty - qty > 0 ? cartItem.qty -= qty : (shoppingCart.items = shoppingCart.items.filter(item => item.id !== id));
+            saveLocal();
+        },
+        count:()=>{
+            return shoppingCart.items.reduce((acc, item) => acc += item.qty, 0);
+            saveLocal();
+        },
+        get:(id)=>{
+            const index = shoppingCart.items.findIndex(item => item.id === id);
+            return index >= 0 ? shoppingCart.items[index] : null;
+        },
+        getTotal:()=>{
+            const total = shoppingCart.items.reduce((acc, item) => {
+                const found = db.methods.find(item.id);
+                return (acc += found.price * item.qty);
+            });
+            return total;
+        },
+        hasInventory:(id, qty)=>{
+            return db.items.find(item => item.id === id).qty - qty >= 0;
+        },
+        purchase:()=>{
+            db.methods.remove(shoppingCart.items);
+            shoppingCart.items = [];
+            saveLocal();
+        },
+    }
 }
 const saveLocal = () => {
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart.items));
 }
 
+const productContainer = document.querySelector('#product-container');
 function renderStore() {
     const html = db.items.map((item) => {
-        return ``;
+        const div = document.createElement('div');
+        div.classList.add('pro');
+        div.innerHTML = `
+                <img src="${item.img}" alt="${item.name}" >
+                <div class="des">
+                    <span>${item.tmark}</span>
+                    <h5>${item.name}</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>${item.price}</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                `;
+        productContainer.append(div);
     });
 }
+renderStore();
 
