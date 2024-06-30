@@ -234,3 +234,50 @@ function renderStore() {
 }
 renderStore();
 
+const proDetails = document.querySelector('#prodetails');
+function renderDetails(){
+    const html = db.items.map((item) => {
+        const div = document.createElement('div');
+        div.classList.add('single-pro-image')
+        div.innerHTML = `
+            <img src="../img/products/f1.jpg" width="100%" id="mainImg" alt="">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="../img/products/f1.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/products/f4.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/products/f5.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="../img/products/f6.jpg" width="100%" class="small-img" alt="">
+                </div>
+            </div>>
+        `;
+        const div2 = document.createElement('div');
+        div.classList.add('single-pro-details');
+        div.innerHTML = `
+            <h6>Redragon</h6>
+            <h4>Modelo gaming</h4>
+            <h2>$8000</h2>
+            <select>
+                <option>Color</option>
+                <option>Blanco</option>
+                <option>Negro</option>
+                <option>Gris</option>
+            </select>
+            <input type="number" value="1">
+            <button class="normal">Añadir al carrito</button>
+            <h4>Caracteristicas</h4>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloribus alias voluptate quibusdam, excepturi ipsum deserunt corrupti numquam suscipit in ullam ipsam necessitatibus quasi sint vel, ad quaerat similique dolorem.</span>
+        `;
+    })
+}
+
+
+function renderShoppingCart() {
+
+}
+
