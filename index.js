@@ -30,6 +30,12 @@ const db = {
             id: 0,
             name: "Teclado K552",
             img: "../img/products/f1.jpg",
+            sImg:{
+                img1: "../img/products/f1.jpg",
+                img2: "../img/products/f4.jpg",
+                img3: "../img/products/f5.jpg",
+                img4:"../img/products/f6.jpg"
+            },
             price: 8000,
             qty: 4,
             tmark: "Redragon"
