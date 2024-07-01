@@ -212,24 +212,31 @@ const productContainer = document.querySelector('#product-container');
 function renderStore() {
     const html = db.items.map((item) => {
         const div = document.createElement('div');
-        div.classList.add('pro');
+        div.classList.add('pro', 'add');
+        
         div.innerHTML = `
-                <img src="${item.img}" alt="${item.name}" >
-                <div class="des">
-                    <span>${item.tmark}</span>
-                    <h5>${item.name}</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>${item.price}</h4>
+            <img src="${item.img}" alt="${item.name}" >
+            <div class="des" data-id="${item.id}">
+                <span>${item.tmark}</span>
+                <h5>${item.name}</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                `;
+                <h4>${item.price}</h4>
+            </div>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+        `;
         productContainer.append(div);
+        div.addEventListener('click', e => {
+            window.location.href = 'sproduct.html';
+            const id = parseInt(div.getAttribute('data-id'));
+            const item = db.methods.find(id);
+            renderDetails();
+        })
     });
 }
 renderStore();
@@ -240,7 +247,7 @@ function renderDetails(){
         const div = document.createElement('div');
         div.classList.add('single-pro-image')
         div.innerHTML = `
-            <img src="../img/products/f1.jpg" width="100%" id="mainImg" alt="">
+            <img src="${item.img}" width="100%" id="mainImg" alt="">
             <div class="small-img-group">
                 <div class="small-img-col">
                     <img src="../img/products/f1.jpg" width="100%" class="small-img" alt="">
@@ -257,19 +264,19 @@ function renderDetails(){
             </div>>
         `;
         const div2 = document.createElement('div');
-        div.classList.add('single-pro-details');
-        div.innerHTML = `
-            <h6>Redragon</h6>
-            <h4>Modelo gaming</h4>
-            <h2>$8000</h2>
+        div2.classList.add('single-pro-details');
+        div2.innerHTML = `
+            <h6>${item.tmark}</h6>
+            <h4>${item.name}</h4>
+            <h2>${item.price}</h2>
             <select>
                 <option>Color</option>
                 <option>Blanco</option>
                 <option>Negro</option>
                 <option>Gris</option>
             </select>
-            <input type="number" value="1">
-            <button class="normal">Añadir al carrito</button>
+            <input type="number" value="${item.qty}">
+            <button class="normal addOne" data-id="${item.id}">Añadir al carrito</button>
             <h4>Caracteristicas</h4>
             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloribus alias voluptate quibusdam, excepturi ipsum deserunt corrupti numquam suscipit in ullam ipsam necessitatibus quasi sint vel, ad quaerat similique dolorem.</span>
         `;
@@ -278,6 +285,6 @@ function renderDetails(){
 
 
 function renderShoppingCart() {
-
+    
 }
 
