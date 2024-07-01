@@ -47,18 +47,6 @@ function renderDetails() {
         <h4>Caracteristicas</h4>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloribus alias voluptate quibusdam, excepturi ipsum deserunt corrupti numquam suscipit in ullam ipsam necessitatibus quasi sint vel, ad quaerat similique dolorem.</span>
     </div>
-    `
-    // smallImg[0].onclick = function () {
-    //     mainImg.src = smallImg[0].src;
-    // }
-    // smallImg[1].onclick = function () {
-    //     mainImg.src = smallImg[1].src;
-    // }
-    // smallImg[2].onclick = function () {
-    //     mainImg.src = smallImg[2].src;
-    // }
-    // smallImg[3].onclick = function () {
-    //     mainImg.src = smallImg[3].src;
-    // }
+    `;
 };
 renderDetails();
