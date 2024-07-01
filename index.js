@@ -157,7 +157,7 @@ const db = {
     ]
 }
 const shoppingCart = {
-    items: JSON.parse(localStorage.getItem('shoppingCart')) || [],
+    items: [],
     methods: {
         add:(id, qty)=>{
             const cartItem = shoppingCart.methods.get(id);
@@ -171,17 +171,17 @@ const shoppingCart = {
             }else{
                 shoppingCart.items.push({id, qty});
             }
-            saveLocal();
+            
         },
         remove:(id, qty)=>{
             const cartItem = shoppingCart.methods.get(id);
 
             cartItem.qty - qty > 0 ? cartItem.qty -= qty : (shoppingCart.items = shoppingCart.items.filter(item => item.id !== id));
-            saveLocal();
+            
         },
         count:()=>{
             return shoppingCart.items.reduce((acc, item) => acc += item.qty, 0);
-            saveLocal();
+            
         },
         get:(id)=>{
             const index = shoppingCart.items.findIndex(item => item.id === id);
@@ -200,12 +200,9 @@ const shoppingCart = {
         purchase:()=>{
             db.methods.remove(shoppingCart.items);
             shoppingCart.items = [];
-            saveLocal();
+            
         },
     }
-}
-const saveLocal = () => {
-    localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart.items));
 }
 
 const productContainer = document.querySelector('#product-container');
@@ -232,56 +229,17 @@ function renderStore() {
         `;
         productContainer.append(div);
         div.addEventListener('click', e => {
+            localStorage.setItem("product", JSON.stringify(item));
             window.location.href = 'sproduct.html';
-            const id = parseInt(div.getAttribute('data-id'));
-            const item = db.methods.find(id);
-            renderDetails();
         })
     });
 }
 renderStore();
 
-const proDetails = document.querySelector('#prodetails');
-function renderDetails(){
-    const html = db.items.map((item) => {
-        const div = document.createElement('div');
-        div.classList.add('single-pro-image')
-        div.innerHTML = `
-            <img src="${item.img}" width="100%" id="mainImg" alt="">
-            <div class="small-img-group">
-                <div class="small-img-col">
-                    <img src="../img/products/f1.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="../img/products/f4.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="../img/products/f5.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="../img/products/f6.jpg" width="100%" class="small-img" alt="">
-                </div>
-            </div>>
-        `;
-        const div2 = document.createElement('div');
-        div2.classList.add('single-pro-details');
-        div2.innerHTML = `
-            <h6>${item.tmark}</h6>
-            <h4>${item.name}</h4>
-            <h2>${item.price}</h2>
-            <select>
-                <option>Color</option>
-                <option>Blanco</option>
-                <option>Negro</option>
-                <option>Gris</option>
-            </select>
-            <input type="number" value="${item.qty}">
-            <button class="normal addOne" data-id="${item.id}">Añadir al carrito</button>
-            <h4>Caracteristicas</h4>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloribus alias voluptate quibusdam, excepturi ipsum deserunt corrupti numquam suscipit in ullam ipsam necessitatibus quasi sint vel, ad quaerat similique dolorem.</span>
-        `;
-    })
-}
+// const proDetails = document.querySelector('#prodetails');
+// function renderDetails() {
+    
+// }
 
 
 function renderShoppingCart() {
