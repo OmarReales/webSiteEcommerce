@@ -40,14 +40,20 @@ function renderDetails() {
             <option>Negro</option>
             <option>Gris</option>
         </select>
-        <input type="number" id ="quantity" value="1">
-        <button class="normal" id="addcart">Añadir al carrito</button>
+        <input class= "quantity" id="quantity" type="number" data-id ="${productLocal.id}" value="1">
+        <button class="normal addcart" data-id="${productLocal.id}">Añadir al carrito</button>
         <h4>Caracteristicas</h4>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloribus alias voluptate quibusdam, excepturi ipsum deserunt corrupti numquam suscipit in ullam ipsam necessitatibus quasi sint vel, ad quaerat similique dolorem.</span>
     </div>
     `;
+    document.querySelectorAll(".addcart").forEach((button) => {
+        button.addEventListener("click", (e) => {
+            localStorage.setItem("shoppingCart", JSON.stringify(productLocal));
+        });
+    });
 };
 renderDetails();
+
 
 let mainImg = document.getElementById("mainimg");
 let smallImg = document.getElementsByClassName("small-img");
@@ -56,4 +62,10 @@ for (let i = 0; i < smallImg.length; i++) {
     smallImg[i].onclick = function() {
         mainImg.src = smallImg[i].src;
     };
+}
+
+function addToShoppingCart() {
+    let quantity = document.getElementById("quantity").value;
+    let addCart = document.getElementById("addcart");
+    addCart.innerHTML = "Añadir al carrito";
 }
