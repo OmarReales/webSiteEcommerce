@@ -33,6 +33,7 @@ function renderDetails() {
         <h6>${productLocal.tmark}</h6>
         <h4>${productLocal.name}</h4>
         <h2>$${productLocal.price}</h2>
+        <span>Stock: ${productLocal.qty}</span>
         <select>
             <option>Color</option>
             <option>Blanco</option>
