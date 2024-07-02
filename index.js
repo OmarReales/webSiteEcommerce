@@ -337,6 +337,18 @@ renderStore();
     
 // }
 
+// const getProducts = () => {
+//     return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(db);
+//     }, 4000);
+//     });
+// };
+// getProducts()
+//     .then((db) => console.log(db))
+//     .catch((error) => console.error(error))
+//     .finally(() => console.log("Fin del proceso!"))
+
 
 function renderShoppingCart() {
     
