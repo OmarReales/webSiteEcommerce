@@ -110,6 +110,11 @@ body {
     bottom: -4px;
     left: 20px;
 }
+#navbar span {
+    color: #088178;
+    padding-left: 10px;
+    position: relative;
+}
 
 #mobile {
     display: none;

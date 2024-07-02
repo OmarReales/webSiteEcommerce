@@ -1,9 +1,13 @@
 const productLocal = JSON.parse(localStorage.getItem("product"));
+let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) ||[];
 console.log(productLocal);
+const badge = document.querySelector(".badge");
 
+// let addCart = document.querySelector(".addcart");
 function renderDetails() {
     const productLocal = JSON.parse(localStorage.getItem("product"));
     const proDetails = document.querySelector("#prodetails");
+    
     
     proDetails.innerHTML = `
     <div class="single-pro-image">
@@ -35,16 +39,17 @@ function renderDetails() {
             <option>Gris</option>
         </select>
         <input class= "quantity" id="quantity" type="number" data-id ="${productLocal.id}" value="1">
-        <button class="normal addcart" data-id="${productLocal.id}">Añadir al carrito</button>
+        <button class="normal addcart" id="${productLocal.id}">Añadir al carrito</button>
         <h4>Caracteristicas</h4>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloribus alias voluptate quibusdam, excepturi ipsum deserunt corrupti numquam suscipit in ullam ipsam necessitatibus quasi sint vel, ad quaerat similique dolorem.</span>
     </div>
     `;
-    document.querySelectorAll(".addcart").forEach((button) => {
-        button.addEventListener("click", (e) => {
-            localStorage.setItem("shoppingCart", JSON.stringify(productLocal));
-        });
-    });
+    addToCart();
+    // document.querySelectorAll(".addcart").forEach((button) => {
+    //     button.addEventListener("click", (e) => {
+    //         localStorage.setItem("shoppingCart", JSON.stringify(productLocal));
+    //     });
+    // });
 };
 renderDetails();
 
@@ -58,8 +63,52 @@ for (let i = 0; i < smallImg.length; i++) {
     };
 }
 
-function addToShoppingCart() {
-    let quantity = document.getElementById("quantity").value;
-    let addCart = document.getElementById("addcart");
-    addCart.innerHTML = "Añadir al carrito";
+function addToCart() {
+    let addCartButtons = document.querySelectorAll(".addcart");
+
+    addCartButtons.forEach(button => {
+        button.addEventListener("click",(e)=>{
+            // localStorage.setItem("shoppingCart", JSON.stringify(productLocal));
+            addToShoppingCart(e);
+        });
+    });
+}
+
+
+
+function addToShoppingCart(e){
+
+    const buttonId = e.currentTarget.id;
+    const quantityInput = document.querySelector(`#quantity[data-id="${buttonId}"]`);
+    const quantity = parseInt(quantityInput.value);
+
+    if (!Array.isArray(shoppingCart)) {
+        shoppingCart = [];
+    }
+
+    const productIndex = shoppingCart.findIndex(product => product.id === buttonId);
+    if(productIndex !== -1){
+        shoppingCart[productIndex].qty += quantity;
+        
+    }else{
+        const newProduct = {...productLocal, qty: quantity};
+        
+        shoppingCart.push(newProduct);
+    }
+    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    console.log(shoppingCart);
+    renderBadge();
+}
+
+function renderBadge() {
+    let badge = document.querySelector(".badge");
+    
+    if ( shoppingCart.length>0){
+        badge.style.display = "";
+        badge.innerHTML = shoppingCart.length;
+    }else{
+        badge.style.display = "none";
+    }
+    // badge.style.display = "";
+    // badge.innerHTML = shoppingCart.length;
 }

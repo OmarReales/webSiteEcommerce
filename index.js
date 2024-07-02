@@ -261,14 +261,17 @@ function renderStore() {
                 </div>
                 <h4>${item.price}</h4>
             </div>
-            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
         `;
         productContainer.append(div);
         div.addEventListener('click', e => {
             localStorage.setItem("product", JSON.stringify(item));
-            window.location.href = 'sproduct.html';
+            if(location.href == "http://127.0.0.1:5500/index.html") {
+                window.location.href = '../pages/sproduct.html';
+            }else{
+                window.location.href = 'sproduct.html';
+            }
         })
     });
 }
 renderStore();
-
