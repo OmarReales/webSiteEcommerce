@@ -1,15 +1,9 @@
 const productLocal = JSON.parse(localStorage.getItem("product"));
 console.log(productLocal);
 
-// const proDetails = document.querySelector("#prodetails");
-// const quantity = document.querySelector("#quantity");
-// const addCart = document.querySelector("#addcart");
-
 function renderDetails() {
     const productLocal = JSON.parse(localStorage.getItem("product"));
     const proDetails = document.querySelector("#prodetails");
-    // const quantity = document.querySelector("#quantity");
-    // const addCart = document.querySelector("#addcart");
     
     proDetails.innerHTML = `
     <div class="single-pro-image">
