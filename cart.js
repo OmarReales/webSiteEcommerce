@@ -1,5 +1,3 @@
-
-
 const shoppingCart = {
     items: JSON.parse(localStorage.getItem("shoppingCart")) || [],
     methods: {
