@@ -13,6 +13,17 @@ if (close) {
     })
 }
 const db = {
+    methods: {
+        find: (id) =>{
+            return db.items.find(item => item.id == id);
+        },
+        remove:(items) => {
+            items.forEach(item => {
+                const product = db.methods.find(item.id);
+                product.qty = product.qty - item.qty;
+            });
+        }   
+    },
     items: [
         {
             id: 0,
