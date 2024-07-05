@@ -18,7 +18,7 @@ function getJsonPath() {
     const pathname = window.location.pathname;
     if (pathname.includes('index.html') || pathname === '/') {
         return 'products.json';
-    } else if (pathname.includes('pages/shop.html') || pathname.includes('pages/sproducts.html')) {
+    } else if (pathname.includes('pages/shop.html') || pathname.includes('pages/sproducts.html') ) {
         return '../products.json'; // Ruta relativa al estar en páginas dentro de la carpeta 'pages'
     }
     return '/products.json'; // Ruta por defecto
