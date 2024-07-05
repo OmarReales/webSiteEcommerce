@@ -136,7 +136,13 @@
             <p>© 2024 Tienda - Todos los derechos reservados</p>
         </div>
     </footer>
-
     <script src="../index.js"></script>
+    <script src="../details.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+            renderBadge();
+        });
+    </script>
 </body>
 </html>

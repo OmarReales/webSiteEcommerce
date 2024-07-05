@@ -45,13 +45,13 @@ function renderDetails() {
     </div>
     `;
     addToCart();
-    // document.querySelectorAll(".addcart").forEach((button) => {
-    //     button.addEventListener("click", (e) => {
-    //         localStorage.setItem("shoppingCart", JSON.stringify(productLocal));
-    //     });
-    // });
 };
 renderDetails();
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderBadge();
+    renderDetails();
+});
 
 
 let mainImg = document.getElementById("mainimg");
@@ -62,33 +62,6 @@ for (let i = 0; i < smallImg.length; i++) {
         mainImg.src = smallImg[i].src;
     };
 }
-
-// function addToCart() {
-//     let addCartButtons = document.querySelectorAll(".addcart");
-
-//     addCartButtons.forEach(button => {
-//         button.addEventListener("click",(e)=>{
-//             const buttonId = e.currentTarget.id;
-//             const quantityInput = document.querySelector(`#quantity[data-id="${buttonId}"]`);
-//             const quantity = parseInt(quantityInput.value);
-
-//             if (!Array.isArray(shoppingCart)) {
-//                 shoppingCart = [];
-//             }
-
-//             const productIndex = shoppingCart.findIndex(product => product.id === buttonId);
-//             if(productIndex !== -1){
-//                 shoppingCart[productIndex].qty += quantity;
-//             }else{
-//                 const newProduct = {...productLocal, id: buttonId, qty: quantity};
-//                 shoppingCart.push(newProduct);
-//             }
-//             localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
-            
-//             renderBadge();
-//         });
-//     });
-// }
 
 function addToCart() {
     let addCartButtons = document.querySelectorAll(".addcart");
@@ -131,7 +104,6 @@ function addToCart() {
 function renderBadge() {
     let badge = document.querySelector(".badge");
 
-    // Calcular la cantidad total de productos en el carrito
     let totalQuantity = shoppingCart.reduce((sum, product) => sum + product.qty, 0);
 
     if (totalQuantity > 0) {
