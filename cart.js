@@ -1,4 +1,4 @@
-const shoppingCart = {
+const shoppingCartArray = {
     items: JSON.parse(localStorage.getItem("shoppingCart")) || [],
     methods: {
         add: (id, qty) => {
