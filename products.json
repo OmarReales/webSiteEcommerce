@@ -12,119 +12,128 @@
             },
             "price": 56,
             "qty": 4,
-            "tmark": "Redragon"
+            "tmark": "Redragon",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         },
         {
             "id": 1,
-            "name": "Teclado K600",
-            "img": "../img/products/f1.jpg",
+            "name": "Teclado K669",
+            "img": "../img/products/f6.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
+                "img1": "../img/products/f6.jpg",
                 "img2": "../img/products/f4.jpg",
                 "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img4": "../img/products/k669.jpg"
             },
             "price": 60,
             "qty": 6,
-            "tmark": "Redragon"
+            "tmark": "Redragon",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         },
         {
             "id": 2,
-            "name": "Auricular 5.1",
-            "img": "../img/products/f1.jpg",
+            "name": "Zeus2 H510",
+            "img": "../img/products/aur.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/aur.jpg",
+                "img2": "../img/products/aur1.jpg",
+                "img3": "../img/products/aur2.jpg",
+                "img4": "../img/products/aur3.jpg"
             },
             "price": 45,
             "qty": 8,
-            "tmark": "Redragon"
+            "tmark": "Redragon",
+            "description": "7.1 virtual via USB; stereo por ficha 3.5; USB 2.0 y 3.5TRRS, cables intercambiables; Microfono desmontable"
         },
         {
             "id": 3,
-            "name": "Auricular 7.1",
-            "img": "../img/products/f1.jpg",
+            "name": "Zeus X Wireless",
+            "img": "../img/products/aurX1.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/aurX1.jpg",
+                "img2": "../img/products/aurX2.jpg",
+                "img3": "../img/products/aurX3.jpg",
+                "img4": "../img/products/aurX4.jpg"
             },
             "price": 60,
             "qty": 4,
-            "tmark": "Redragon"
+            "tmark": "Redragon",
+            "description": "7.1 virtual; Retroiluminacion RGB; Conector USB enchapado con filtro para interferencias; Cable desmontable 2m;"
         },
         {
             "id": 4,
             "name": "Auriculares de oficina",
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/aurG1.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/aurG1.jpg",
+                "img2": "../img/products/aurG2.jpg",
+                "img3": "../img/products/aurG3.jpg",
+                "img4": "../img/products/aurG4.jpg"
             },
             "price": 15,
             "qty": 6,
-            "tmark": "Genius"
+            "tmark": "Genius",
+            "description": "Auriculares de oficina; Conector 3.5"
         },
         {
             "id": 5,
-            "name": "Monitor 24\"",
-            "img": "../img/products/f1.jpg",
+            "name": "LG 24MP400-B 24\"",
+            "img": "../img/products/lg241.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/lg241.jpg",
+                "img2": "../img/products/lg242.jpg",
+                "img3": "../img/products/lg243.jpg",
+                "img4": "../img/products/lg244.jpg"
             },
             "price": 180,
             "qty": 4,
-            "tmark": "LG"
+            "tmark": "LG",
+            "description": "Panel IPS; color NTSC+72%; 1920x1080; 75Hz; HDMI"
         },
         {
             "id": 6,
-            "name": "Monitor 24\" 144Hz",
-            "img": "../img/products/f1.jpg",
+            "name": "LG UltraGear 24\" 144Hz",
+            "img": "../img/products/lg24144.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/lg24144.jpg",
+                "img2": "../img/products/lg241441.jpg",
+                "img3": "../img/products/lg241442.jpg",
+                "img4": "../img/products/lg241443.jpg"
             },
             "price": 250,
             "qty": 6,
-            "tmark": "LG"
+            "tmark": "LG",
+            "description": "Panel IPS; color NTSC+72%; 1920x1080; 144Hz; HDMIx2"
         },
         {
             "id": 7,
-            "name": "Monitor 27\" 144Hz",
-            "img": "../img/products/f1.jpg",
+            "name": "LG 27GL650F FULLHD 27\" 144Hz",
+            "img": "../img/products/LG271441.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/LG271441.jpg",
+                "img2": "../img/products/LG271442.jpg",
+                "img3": "../img/products/LG271443.jpg",
+                "img4": "../img/products/LG271444.jpg"
             },
             "price": 320,
             "qty": 4,
-            "tmark": "LG"
+            "tmark": "LG",
+            "description": "Panel IPS; color NTSC+72%; 1920x1080; 144Hz; HDMIx2"
         },
         {
             "id": 8,
             "name": "Mouse M607",
             "price": 16,
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/m607.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/m607.jpg",
+                "img2": "../img/products/m607.jpg",
+                "img3": "../img/products/m6072.jpg",
+                "img4": "../img/products/m6073.jpg"
             },
             "qty": 6,
-            "tmark": "Redragon"
+            "tmark": "Redragon",
+            "description": "Siete botones programables; RGB; DPI 600/7200; 1000hz"
         },
         {
             "id": 9,
@@ -138,7 +147,8 @@
             },
             "price": 47,
             "qty": 4,
-            "tmark": "Redragon"
+            "tmark": "Redragon",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         },
         {
             "id": 10,
@@ -152,7 +162,8 @@
             },
             "price": 62,
             "qty": 6,
-            "tmark": "Redragon"
+            "tmark": "Redragon",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         },
         {
             "id": 11,
@@ -166,7 +177,8 @@
             },
             "price": 36,
             "qty": 4,
-            "tmark": "Redragon"
+            "tmark": "Redragon",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         },
         {
             "id": 12,
@@ -180,7 +192,8 @@
             },
             "price": 700,
             "qty": 6,
-            "tmark": "Nvidia"
+            "tmark": "Nvidia",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         },
         {
             "id": 13,
@@ -194,7 +207,8 @@
             },
             "price": 242,
             "qty": 4,
-            "tmark": "Nvidia"
+            "tmark": "Nvidia",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         },
         {
             "id": 14,
@@ -208,7 +222,8 @@
             },
             "price": 25,
             "qty": 6,
-            "tmark": "Logitech"
+            "tmark": "Logitech",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         },
         {
             "id": 15,
@@ -222,7 +237,8 @@
             },
             "price": 13,
             "qty": 4,
-            "tmark": "Genius"
+            "tmark": "Genius",
+            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
         }
     ]
 }
