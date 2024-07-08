@@ -87,7 +87,13 @@ function addToCart() {
             }
 
             if (quantity + currentQtyInCart > stock) {
-                alert("No puedes agregar más de la cantidad en stock.");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'No hay suficiente stock',
+                    text: 'La cantidad solicitada supera el stock disponible.',
+                    footer: '<a href="../pages/shop.html">Seguir comprando</a>',
+                    
+                });
                 return;
             }
 

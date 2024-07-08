@@ -29,16 +29,30 @@ function renderShoppingCart() {
     totalPrice.innerHTML = numberToCurrency(total + 200);
 
     const purchase = document.querySelector("#purchase");
-    purchase.addEventListener("click", () => {
-        localStorage.removeItem("shoppingCart");
-        renderShoppingCart();
-        totalItems.innerHTML = numberToCurrency(0);
-        delivery.innerHTML = numberToCurrency(0);
-        totalPrice.innerHTML = numberToCurrency(0);
-        alert("Gracias por tu compra");
+    if (total !== 0) {
+        purchase.addEventListener("click", () => {
+            localStorage.removeItem("shoppingCart");
+            renderShoppingCart();
+            totalItems.innerHTML = numberToCurrency(0);
+            delivery.innerHTML = numberToCurrency(0);
+            totalPrice.innerHTML = numberToCurrency(0);
+            Swal.fire({
+                icon: "success",
+                title: "Compra Exitosa!",
+                text: "Muchas gracias por elegirnos!",
+                footer: '<a href="../pages/shop.html">Seguir comprando</a>'
+            });
+        });
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'No hay artículos en el carrito',
+            text: 'Por favor, agregue artículos al carrito',
+            footer: '<a href="../pages/shop.html">Seguir comprando</a>'
+        });
+    }
+};
 
-    });
-}
 renderShoppingCart();
 
 function numberToCurrency(n){
