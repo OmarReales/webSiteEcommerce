@@ -14,6 +14,21 @@ if (close) {
 }
 // Encontrar ruta del archivo json
 
+function numberToCurrency(n){
+    return new Intl.NumberFormat('en-US',{
+        maximumFractionDigits:2,
+        style: 'currency',
+        currency: 'USD'
+    }).format(n);
+}
+
+const getDolar = async () => {
+    const res = await fetch('https://dolarapi.com/v1/dolares/blue');
+    const data = await res.json();
+    
+    return data.venta;    
+}
+
 function getJsonPath() {
     const pathname = window.location.pathname;
     if (pathname.includes('index.html') || pathname === '/') {
@@ -26,11 +41,12 @@ function getJsonPath() {
     return '/products.json'; // Ruta por defecto
 }
 
-
-// Cargar productos desde JSON y definir métodos
-fetch(getJsonPath())
-    .then(response => response.json())
-    .then(data => {
+const loadProducts = async () => {
+    try {
+        const dolarValue = await getDolar();
+        const response = await fetch(getJsonPath());
+        const data = await response.json();
+        
         const db = {
             items: data.items || [],
             methods: {
@@ -47,6 +63,7 @@ fetch(getJsonPath())
                 }
             }
         };
+        
         // Renderizar la tienda
         const productContainer = document.querySelector('#product-container');
         function renderStore() {
@@ -67,7 +84,7 @@ fetch(getJsonPath())
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>${item.price}</h4>
+                        <h4>${numberToCurrency(item.price * dolarValue)}</h4>
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                 `;
@@ -85,6 +102,11 @@ fetch(getJsonPath())
                 });
             });
         }
+        
         renderStore();
-    })
-    .catch(error => console.error('Error al cargar el JSON:', error));
+    } catch (error) {
+        console.error('Error al cargar el JSON o el valor del dólar:', error);
+    }
+};
+
+loadProducts();

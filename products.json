@@ -10,7 +10,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 8000,
+            "price": 56,
             "qty": 4,
             "tmark": "Redragon"
         },
@@ -24,7 +24,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 10000,
+            "price": 60,
             "qty": 6,
             "tmark": "Redragon"
         },
@@ -38,7 +38,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 9000,
+            "price": 45,
             "qty": 8,
             "tmark": "Redragon"
         },
@@ -52,7 +52,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 13000,
+            "price": 60,
             "qty": 4,
             "tmark": "Redragon"
         },
@@ -66,7 +66,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 5000,
+            "price": 15,
             "qty": 6,
             "tmark": "Genius"
         },
@@ -80,7 +80,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 24000,
+            "price": 180,
             "qty": 4,
             "tmark": "LG"
         },
@@ -94,7 +94,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 32000,
+            "price": 250,
             "qty": 6,
             "tmark": "LG"
         },
@@ -108,14 +108,14 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 38000,
+            "price": 320,
             "qty": 4,
             "tmark": "LG"
         },
         {
             "id": 8,
-            "name": "Mouse M600",
-            "price": 8000,
+            "name": "Mouse M607",
+            "price": 16,
             "img": "../img/products/f1.jpg",
             "sImg": {
                 "img1": "../img/products/f1.jpg",
@@ -128,7 +128,7 @@
         },
         {
             "id": 9,
-            "name": "Mouse M552",
+            "name": "Mouse M908",
             "img": "../img/products/f1.jpg",
             "sImg": {
                 "img1": "../img/products/f1.jpg",
@@ -136,13 +136,13 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 7000,
+            "price": 47,
             "qty": 4,
             "tmark": "Redragon"
         },
         {
             "id": 10,
-            "name": "Mouse M701",
+            "name": "Mouse M719",
             "img": "../img/products/f1.jpg",
             "sImg": {
                 "img1": "../img/products/f1.jpg",
@@ -150,13 +150,13 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 14000,
+            "price": 62,
             "qty": 6,
             "tmark": "Redragon"
         },
         {
             "id": 11,
-            "name": "Joystick J7",
+            "name": "Joystick G818",
             "img": "../img/products/f1.jpg",
             "sImg": {
                 "img1": "../img/products/f1.jpg",
@@ -164,7 +164,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 8000,
+            "price": 36,
             "qty": 4,
             "tmark": "Redragon"
         },
@@ -178,13 +178,13 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 300000,
+            "price": 700,
             "qty": 6,
             "tmark": "Nvidia"
         },
         {
             "id": 13,
-            "name": "Placa de video GTX 1080",
+            "name": "Placa de video GTX 1080ti",
             "img": "../img/products/f1.jpg",
             "sImg": {
                 "img1": "../img/products/f1.jpg",
@@ -192,7 +192,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 150000,
+            "price": 242,
             "qty": 4,
             "tmark": "Nvidia"
         },
@@ -206,7 +206,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 15000,
+            "price": 25,
             "qty": 6,
             "tmark": "Logitech"
         },
@@ -220,7 +220,7 @@
                 "img3": "../img/products/f5.jpg",
                 "img4": "../img/products/f6.jpg"
             },
-            "price": 15000,
+            "price": 13,
             "qty": 4,
             "tmark": "Genius"
         }

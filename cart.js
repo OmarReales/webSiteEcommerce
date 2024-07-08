@@ -1,5 +1,6 @@
-function renderShoppingCart() {
-    const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || { items: [] };
+const renderShoppingCart = async () => {
+    const dolarValue = await getDolar(); // Obtener el valor del dólar blue
+    const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     const items = shoppingCart;
 
     let total = 0;
@@ -9,30 +10,32 @@ function renderShoppingCart() {
 
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
+        const itemPriceInDollars = item.price * dolarValue; // Multiplicar el precio por el valor del dólar
         const tr = document.createElement("tr");
         tr.innerHTML = `
             <td><a href="#"><i class="far fa-times-circle"></i></a></td>
             <td><img src="${item.img}" alt=""></td>
             <td>${item.name}</td>
-            <td>${item.price}</td>
+            <td>${numberToCurrency(itemPriceInDollars)}</td>
             <td><input type="number" value="${item.qty}"></td>
-            <td>${item.price * item.qty}</td>
+            <td>${numberToCurrency(itemPriceInDollars * item.qty)}</td>
         `;
-        total += item.price * item.qty;
+        total += itemPriceInDollars * item.qty;
         tbody.append(tr);
     }
     const totalItems = document.querySelector(".subtotal");
     const delivery = document.querySelector(".delivery");
     const totalPrice = document.querySelector(".total");
     totalItems.innerHTML = numberToCurrency(total);
-    delivery.innerHTML = numberToCurrency(200);
-    totalPrice.innerHTML = numberToCurrency(total + 200);
+    delivery.innerHTML = numberToCurrency(dolarValue); // costo entrega igual a un dolar
+    totalPrice.innerHTML = numberToCurrency(total + dolarValue); // Sumar el costo de entrega al total
 
     const purchase = document.querySelector("#purchase");
     if (total !== 0) {
         purchase.addEventListener("click", () => {
             localStorage.removeItem("shoppingCart");
             renderShoppingCart();
+            renderBadge();
             totalItems.innerHTML = numberToCurrency(0);
             delivery.innerHTML = numberToCurrency(0);
             totalPrice.innerHTML = numberToCurrency(0);
@@ -54,11 +57,3 @@ function renderShoppingCart() {
 };
 
 renderShoppingCart();
-
-function numberToCurrency(n){
-    return new Intl.NumberFormat('en-US',{
-        maximumFractionDigits:2,
-        style: 'currency',
-        currency: 'USD'
-    }).format(n);
-}

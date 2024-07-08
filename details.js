@@ -1,16 +1,16 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     renderBadge();
     renderDetails();
 });
-
-function renderDetails() {
+async function renderDetails() {
     const productLocal = JSON.parse(localStorage.getItem("product"));
-
+    
     if (!productLocal) {
         console.error("No se encontró el producto en localStorage.");
         return;
     }
+
+    const dolarValue = await getDolar();
 
     const proDetails = document.querySelector("#prodetails");
 
@@ -35,7 +35,7 @@ function renderDetails() {
         <div class="single-pro-details">
             <h6>${productLocal.tmark}</h6>
             <h4>${productLocal.name}</h4>
-            <h2>$${productLocal.price}</h2>
+            <h2>$${productLocal.price * dolarValue}</h2>
             <span>Stock: ${productLocal.qty}</span>
             <select>
                 <option>Color</option>
@@ -45,7 +45,7 @@ function renderDetails() {
             </select>
             <input class="quantity" id="quantity" type="number" data-id="${productLocal.id}" value="1">
             <button class="normal addcart" id="${productLocal.id}">Añadir al carrito</button>
-            <h4>Caracteristicas</h4>
+            <h4>Características</h4>
             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloribus alias voluptate quibusdam, excepturi ipsum deserunt corrupti numquam suscipit in ullam ipsam necessitatibus quasi sint vel, ad quaerat similique dolorem.</span>
         </div>
     `;
@@ -92,7 +92,6 @@ function addToCart() {
                     title: 'No hay suficiente stock',
                     text: 'La cantidad solicitada supera el stock disponible.',
                     footer: '<a href="../pages/shop.html">Seguir comprando</a>',
-                    
                 });
                 return;
             }
