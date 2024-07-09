@@ -44,11 +44,11 @@ function getJsonPath() {
 function getImagePath(img) {
     const pathname = window.location.pathname;
     if (pathname.includes('index.html') || pathname === '/') {
-        return `images/${img}`; // Ruta para index.html
+        return `img/products/${img}`; // Ruta para index.html
     } else if (pathname.includes('pages/')) {
-        return `../images/${img}`; // Ruta para páginas dentro de la carpeta 'pages'
+        return `../img/products/${img}`; // Ruta para páginas dentro de la carpeta 'pages'
     }
-    return `images/${img}`; // Ruta por defecto
+    return `img/products/${img}`; // Ruta por defecto
 }
 
 const loadProducts = async () => {
