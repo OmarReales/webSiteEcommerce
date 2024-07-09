@@ -12,7 +12,6 @@ if (close) {
         nav.classList.remove('active');
     });
 }
-
 function numberToCurrency(n) {
     return new Intl.NumberFormat('en-US', {
         maximumFractionDigits: 2,

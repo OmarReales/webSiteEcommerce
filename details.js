@@ -16,19 +16,19 @@ async function renderDetails() {
 
     proDetails.innerHTML = `
         <div class="single-pro-image">
-            <img src="${productLocal.img}" width="100%" id="mainimg" alt="">
+            <img src="${getImagePath(productLocal.img)}" width="100%" id="mainimg" alt="">
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="${productLocal.sImg.img1}" width="100%" class="small-img" alt="">
+                    <img src="${getImagePath(productLocal.sImg.img1)}" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="${productLocal.sImg.img2}" width="100%" class="small-img" alt="">
+                    <img src="${getImagePath(productLocal.sImg.img2)}" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="${productLocal.sImg.img3}" width="100%" class="small-img" alt="">
+                    <img src="${getImagePath(productLocal.sImg.img3)}" width="100%" class="small-img" alt="">
                 </div>
                 <div class="small-img-col">
-                    <img src="${productLocal.sImg.img4}" width="100%" class="small-img" alt="">
+                    <img src="${getImagePath(productLocal.sImg.img4)}" width="100%" class="small-img" alt="">
                 </div>
             </div>
         </div>
