@@ -12,7 +12,6 @@ if (close) {
         nav.classList.remove('active');
     })
 }
-// Encontrar ruta del archivo json
 
 function numberToCurrency(n){
     return new Intl.NumberFormat('en-US',{
@@ -28,6 +27,7 @@ const getDolar = async () => {
     
     return data.venta;    
 }
+// Encontrar ruta del archivo json
 
 function getJsonPath() {
     const pathname = window.location.pathname;

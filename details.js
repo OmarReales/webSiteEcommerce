@@ -92,6 +92,7 @@ function addToCart() {
                     title: 'No hay suficiente stock',
                     text: 'La cantidad solicitada supera el stock disponible.',
                     footer: '<a href="../pages/shop.html">Seguir comprando</a>',
+                    confirmButtonColor: "#088178"
                 });
                 return;
             }
@@ -116,6 +117,15 @@ function renderBadge() {
     if (totalQuantity > 0) {
         badge.style.display = "";
         badge.innerHTML = totalQuantity;
+        Toastify({
+            text: "Añadido al carrito",
+            className: "info",
+            style: {
+            background: "#088178",
+            color: "#fff",
+            fontFamily: "Sans-Serif",
+            }
+        }).showToast();
     } else {
         badge.style.display = "none";
     }

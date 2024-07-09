@@ -43,7 +43,8 @@ const renderShoppingCart = async () => {
                 icon: "success",
                 title: "Compra Exitosa!",
                 text: "Muchas gracias por elegirnos!",
-                footer: '<a href="../pages/shop.html">Seguir comprando</a>'
+                footer: '<a href="../pages/shop.html">Seguir comprando</a>',
+                confirmButtonColor: "#088178"
             });
         });
     } else {
@@ -51,7 +52,8 @@ const renderShoppingCart = async () => {
             icon: 'error',
             title: 'No hay artículos en el carrito',
             text: 'Por favor, agregue artículos al carrito',
-            footer: '<a href="../pages/shop.html">Seguir comprando</a>'
+            footer: '<a href="../pages/shop.html">Seguir comprando</a>',
+            confirmButtonColor: "#088178"
         });
     }
 };
