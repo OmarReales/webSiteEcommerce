@@ -3,12 +3,12 @@
         {
             "id": 0,
             "name": "Teclado K552",
-            "img": "../img/products/f1.jpg",
+            "img": "img/products/f1.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img2": "img/products/f4.jpg",
+                "img1": "img/products/f1.jpg",
+                "img3": "img/products/f5.jpg",
+                "img4": "img/products/f6.jpg"
             },
             "price": 56,
             "qty": 4,
@@ -18,12 +18,12 @@
         {
             "id": 1,
             "name": "Teclado K669",
-            "img": "../img/products/f6.jpg",
+            "img": "img/products/f6.jpg",
             "sImg": {
-                "img1": "../img/products/f6.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/k669.jpg"
+                "img1": "img/products/f6.jpg",
+                "img2": "img/products/f4.jpg",
+                "img3": "img/products/f5.jpg",
+                "img4": "img/products/k669.jpg"
             },
             "price": 60,
             "qty": 6,
@@ -33,12 +33,12 @@
         {
             "id": 2,
             "name": "Zeus2 H510",
-            "img": "../img/products/aur.jpg",
+            "img": "img/products/aur.jpg",
             "sImg": {
-                "img1": "../img/products/aur.jpg",
-                "img2": "../img/products/aur1.jpg",
-                "img3": "../img/products/aur2.jpg",
-                "img4": "../img/products/aur3.jpg"
+                "img1": "img/products/aur.jpg",
+                "img2": "img/products/aur1.jpg",
+                "img3": "img/products/aur2.jpg",
+                "img4": "img/products/aur3.jpg"
             },
             "price": 45,
             "qty": 8,
@@ -48,12 +48,12 @@
         {
             "id": 3,
             "name": "Zeus X Wireless",
-            "img": "../img/products/aurX1.jpg",
+            "img": "img/products/aurX1.jpg",
             "sImg": {
-                "img1": "../img/products/aurX1.jpg",
-                "img2": "../img/products/aurX2.jpg",
-                "img3": "../img/products/aurX3.jpg",
-                "img4": "../img/products/aurX4.jpg"
+                "img1": "img/products/aurX1.jpg",
+                "img2": "img/products/aurX2.jpg",
+                "img3": "img/products/aurX3.jpg",
+                "img4": "img/products/aurX4.jpg"
             },
             "price": 60,
             "qty": 4,
@@ -63,12 +63,12 @@
         {
             "id": 4,
             "name": "Auriculares de oficina",
-            "img": "../img/products/aurG1.jpg",
+            "img": "img/products/aurG1.jpg",
             "sImg": {
-                "img1": "../img/products/aurG1.jpg",
-                "img2": "../img/products/aurG2.jpg",
-                "img3": "../img/products/aurG3.jpg",
-                "img4": "../img/products/aurG4.jpg"
+                "img1": "img/products/aurG1.jpg",
+                "img2": "img/products/aurG2.jpg",
+                "img3": "img/products/aurG3.jpg",
+                "img4": "img/products/aurG4.jpg"
             },
             "price": 15,
             "qty": 6,
@@ -78,12 +78,12 @@
         {
             "id": 5,
             "name": "LG 24MP400-B 24\"",
-            "img": "../img/products/lg241.jpg",
+            "img": "img/products/lg241.jpg",
             "sImg": {
-                "img1": "../img/products/lg241.jpg",
-                "img2": "../img/products/lg242.jpg",
-                "img3": "../img/products/lg243.jpg",
-                "img4": "../img/products/lg244.jpg"
+                "img1": "img/products/lg241.jpg",
+                "img2": "img/products/lg242.jpg",
+                "img3": "img/products/lg243.jpg",
+                "img4": "img/products/lg244.jpg"
             },
             "price": 180,
             "qty": 4,
@@ -93,12 +93,12 @@
         {
             "id": 6,
             "name": "LG UltraGear 24\" 144Hz",
-            "img": "../img/products/lg24144.jpg",
+            "img": "img/products/lg24144.jpg",
             "sImg": {
-                "img1": "../img/products/lg24144.jpg",
-                "img2": "../img/products/lg241441.jpg",
-                "img3": "../img/products/lg241442.jpg",
-                "img4": "../img/products/lg241443.jpg"
+                "img1": "img/products/lg24144.jpg",
+                "img2": "img/products/lg241441.jpg",
+                "img3": "img/products/lg241442.jpg",
+                "img4": "img/products/lg241443.jpg"
             },
             "price": 250,
             "qty": 6,
@@ -108,12 +108,12 @@
         {
             "id": 7,
             "name": "LG 27GL650F FULLHD 27\" 144Hz",
-            "img": "../img/products/LG271441.jpg",
+            "img": "img/products/LG271441.jpg",
             "sImg": {
-                "img1": "../img/products/LG271441.jpg",
-                "img2": "../img/products/LG271442.jpg",
-                "img3": "../img/products/LG271443.jpg",
-                "img4": "../img/products/LG271444.jpg"
+                "img1": "img/products/LG271441.jpg",
+                "img2": "img/products/LG271442.jpg",
+                "img3": "img/products/LG271443.jpg",
+                "img4": "img/products/LG271444.jpg"
             },
             "price": 320,
             "qty": 4,
@@ -124,12 +124,12 @@
             "id": 8,
             "name": "Mouse M607",
             "price": 22,
-            "img": "../img/products/m607.jpg",
+            "img": "img/products/m607.jpg",
             "sImg": {
-                "img1": "../img/products/m607.jpg",
-                "img2": "../img/products/m607.jpg",
-                "img3": "../img/products/m6072.jpg",
-                "img4": "../img/products/m6073.jpg"
+                "img1": "img/products/m607.jpg",
+                "img2": "img/products/m607.jpg",
+                "img3": "img/products/m6072.jpg",
+                "img4": "img/products/m6073.jpg"
             },
             "qty": 6,
             "tmark": "Redragon",
@@ -138,12 +138,12 @@
         {
             "id": 9,
             "name": "Mouse M908",
-            "img": "../img/products/m9081.jpg",
+            "img": "img/products/m9081.jpg",
             "sImg": {
-                "img1": "../img/products/m9081.jpg",
-                "img2": "../img/products/m9082.jpg",
-                "img3": "../img/products/m9083.jpg",
-                "img4": "../img/products/m9084.jpg"
+                "img1": "img/products/m9081.jpg",
+                "img2": "img/products/m9082.jpg",
+                "img3": "img/products/m9083.jpg",
+                "img4": "img/products/m9084.jpg"
             },
             "price": 47,
             "qty": 4,
@@ -153,12 +153,12 @@
         {
             "id": 10,
             "name": "Mouse M719",
-            "img": "../img/products/m7191.jpg",
+            "img": "img/products/m7191.jpg",
             "sImg": {
-                "img1": "../img/products/m7191.jpg",
-                "img2": "../img/products/m7192.jpg",
-                "img3": "../img/products/m7193.jpg",
-                "img4": "../img/products/m7194.jpg"
+                "img1": "img/products/m7191.jpg",
+                "img2": "img/products/m7192.jpg",
+                "img3": "img/products/m7193.jpg",
+                "img4": "img/products/m7194.jpg"
             },
             "price": 62,
             "qty": 6,
@@ -168,12 +168,12 @@
         {
             "id": 11,
             "name": "Joystick G818",
-            "img": "../img/products/g8181.jpg",
+            "img": "img/products/g8181.jpg",
             "sImg": {
-                "img1": "../img/products/g8181.jpg",
-                "img2": "../img/products/g8182.jpg",
-                "img3": "../img/products/g8183.jpg",
-                "img4": "../img/products/g8181.jpg"
+                "img1": "img/products/g8181.jpg",
+                "img2": "img/products/g8182.jpg",
+                "img3": "img/products/g8183.jpg",
+                "img4": "img/products/g8181.jpg"
             },
             "price": 36,
             "qty": 4,
@@ -183,12 +183,12 @@
         {
             "id": 12,
             "name": "Placa de video RTX 3090",
-            "img": "../img/products/rtx30901.jpg",
+            "img": "img/products/rtx30901.jpg",
             "sImg": {
-                "img1": "../img/products/rtx30901.jpg",
-                "img2": "../img/products/rtx30902.jpg",
-                "img3": "../img/products/rtx30903.jpg",
-                "img4": "../img/products/rtx30904.jpg"
+                "img1": "img/products/rtx30901.jpg",
+                "img2": "img/products/rtx30902.jpg",
+                "img3": "img/products/rtx30903.jpg",
+                "img4": "img/products/rtx30904.jpg"
             },
             "price": 700,
             "qty": 6,
@@ -198,12 +198,12 @@
         {
             "id": 13,
             "name": "Placa de video GTX 1080ti",
-            "img": "../img/products/1080ti1.jpg",
+            "img": "img/products/1080ti1.jpg",
             "sImg": {
-                "img1": "../img/products/1080ti1.jpg",
-                "img2": "../img/products/1080ti2.jpg",
-                "img3": "../img/products/1080ti3.jpg",
-                "img4": "../img/products/1080ti4.jpg"
+                "img1": "img/products/1080ti1.jpg",
+                "img2": "img/products/1080ti2.jpg",
+                "img3": "img/products/1080ti3.jpg",
+                "img4": "img/products/1080ti4.jpg"
             },
             "price": 242,
             "qty": 4,
@@ -213,12 +213,12 @@
         {
             "id": 14,
             "name": "Webcam C600",
-            "img": "../img/products/c6001.jpg",
+            "img": "img/products/c6001.jpg",
             "sImg": {
-                "img1": "../img/products/c6001.jpg",
-                "img2": "../img/products/c6002.jpg",
-                "img3": "../img/products/c6003.jpg",
-                "img4": "../img/products/c6004.jpg"
+                "img1": "img/products/c6001.jpg",
+                "img2": "img/products/c6002.jpg",
+                "img3": "img/products/c6003.jpg",
+                "img4": "img/products/c6004.jpg"
             },
             "price": 25,
             "qty": 6,
@@ -228,12 +228,12 @@
         {
             "id": 15,
             "name": "Parlante SP-HF180",
-            "img": "../img/products/sp1.jpg",
+            "img": "img/products/sp1.jpg",
             "sImg": {
-                "img1": "../img/products/sp1.jpg",
-                "img2": "../img/products/sp2.jpg",
-                "img3": "../img/products/sp3.jpg",
-                "img4": "../img/products/sp4.jpg"
+                "img1": "img/products/sp1.jpg",
+                "img2": "img/products/sp2.jpg",
+                "img3": "img/products/sp3.jpg",
+                "img4": "img/products/sp4.jpg"
             },
             "price": 13,
             "qty": 4,

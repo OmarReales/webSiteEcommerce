@@ -5,17 +5,17 @@ const nav = document.getElementById('navbar');
 if (bar) {  
     bar.addEventListener('click', () => {
         nav.classList.add('active');
-    })
+    });
 }
 if (close) {
     close.addEventListener('click', () => {
         nav.classList.remove('active');
-    })
+    });
 }
-getJsonPath();
-function numberToCurrency(n){
-    return new Intl.NumberFormat('en-US',{
-        maximumFractionDigits:2,
+
+function numberToCurrency(n) {
+    return new Intl.NumberFormat('en-US', {
+        maximumFractionDigits: 2,
         style: 'currency',
         currency: 'USD'
     }).format(n);
@@ -24,31 +24,27 @@ function numberToCurrency(n){
 const getDolar = async () => {
     const res = await fetch('https://dolarapi.com/v1/dolares/blue');
     const data = await res.json();
-    
-    return data.venta;    
-}
-// Encontrar ruta del archivo json
+    return data.venta;
+};
 
 function getJsonPath() {
     const pathname = window.location.pathname;
     if (pathname.includes('index.html') || pathname === '/') {
         return 'products.json';
-    } else if (pathname.includes('pages/shop.html') || pathname.includes('pages/sproducts.html')) {
-        return '../products.json'; // Ruta relativa al estar en páginas dentro de la carpeta 'pages'
-    }else if (pathname.includes('pages/cart.html')) {
+    } else if (pathname.includes('pages/shop.html') || pathname.includes('pages/sproducts.html') || pathname.includes('pages/cart.html')) {
         return '../products.json';
     }
     return '/products.json'; // Ruta por defecto
 }
-// Encontrar ruta de la imagen
+
 function getImagePath(img) {
     const pathname = window.location.pathname;
     if (pathname.includes('index.html') || pathname === '/') {
-        return `img/products/${img}`; // Ruta para index.html
+        return `${img}`; // La ruta ya está completa en el JSON
     } else if (pathname.includes('pages/')) {
-        return `../img/products/${img}`; // Ruta para páginas dentro de la carpeta 'pages'
+        return `../${img}`; // Ruta relativa para páginas dentro de la carpeta 'pages'
     }
-    return `img/products/${img}`; // Ruta por defecto
+    return `${img}`; // Ruta por defecto
 }
 
 const loadProducts = async () => {
@@ -125,20 +121,20 @@ loadProducts();
 const btn = document.getElementById('button');
 
 document.getElementById('form')
-    addEventListener('submit', function(event) {
-    event.preventDefault();
+    .addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    btn.value = 'Sending...';
+        btn.value = 'Sending...';
 
-    const serviceID = 'default_service';
-    const templateID = 'template_0c8andm';
+        const serviceID = 'default_service';
+        const templateID = 'template_0c8andm';
 
-    emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-        btn.value = 'Send Email';
-        alert('Sent!');
-    }, (err) => {
-        btn.value = 'Send Email';
-        alert(JSON.stringify(err));
+        emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            btn.value = 'Send Email';
+            alert('Sent!');
+        }, (err) => {
+            btn.value = 'Send Email';
+            alert(JSON.stringify(err));
+        });
     });
-});
