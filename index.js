@@ -12,7 +12,7 @@ if (close) {
         nav.classList.remove('active');
     })
 }
-
+getJsonPath();
 function numberToCurrency(n){
     return new Intl.NumberFormat('en-US',{
         maximumFractionDigits:2,
@@ -39,6 +39,16 @@ function getJsonPath() {
         return '../products.json';
     }
     return '/products.json'; // Ruta por defecto
+}
+// Encontrar ruta de la imagen
+function getImagePath(img) {
+    const pathname = window.location.pathname;
+    if (pathname.includes('index.html') || pathname === '/') {
+        return `images/${img}`; // Ruta para index.html
+    } else if (pathname.includes('pages/')) {
+        return `../images/${img}`; // Ruta para páginas dentro de la carpeta 'pages'
+    }
+    return `images/${img}`; // Ruta por defecto
 }
 
 const loadProducts = async () => {
@@ -73,7 +83,7 @@ const loadProducts = async () => {
                 div.classList.add('pro', 'add');
 
                 div.innerHTML = `
-                    <img src="${item.img}" alt="${item.name}">
+                    <img src="${getImagePath(item.img)}" alt="${item.name}">
                     <div class="des" data-id="${item.id}">
                         <span>${item.tmark}</span>
                         <h5>${item.name}</h5>
@@ -92,10 +102,11 @@ const loadProducts = async () => {
                 productContainer.append(div);
 
                 div.addEventListener('click', e => {
+                    e.preventDefault();
                     localStorage.setItem("product", JSON.stringify(item));
                     const pathname = window.location.pathname;
-                    if (pathname.includes("index.html")) {
-                        window.location.href = '../pages/sproduct.html';
+                    if (pathname.includes("index.html") || pathname === "/") {
+                        window.location.href = 'pages/sproduct.html';
                     } else {
                         window.location.href = 'sproduct.html';
                     }
