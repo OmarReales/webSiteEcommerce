@@ -123,7 +123,7 @@
         {
             "id": 8,
             "name": "Mouse M607",
-            "price": 16,
+            "price": 22,
             "img": "../img/products/m607.jpg",
             "sImg": {
                 "img1": "../img/products/m607.jpg",
@@ -138,107 +138,107 @@
         {
             "id": 9,
             "name": "Mouse M908",
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/m9081.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/m9081.jpg",
+                "img2": "../img/products/m9082.jpg",
+                "img3": "../img/products/m9083.jpg",
+                "img4": "../img/products/m9084.jpg"
             },
             "price": 47,
             "qty": 4,
             "tmark": "Redragon",
-            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
+            "description": "18 botones programables; RGB; DPI 12400; 1000hz; 135 g"
         },
         {
             "id": 10,
             "name": "Mouse M719",
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/m7191.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/m7191.jpg",
+                "img2": "../img/products/m7192.jpg",
+                "img3": "../img/products/m7193.jpg",
+                "img4": "../img/products/m7194.jpg"
             },
             "price": 62,
             "qty": 6,
             "tmark": "Redragon",
-            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
+            "description": "18 botones programables; RGB; DPI 10000; 1000hz; 78 g"
         },
         {
             "id": 11,
             "name": "Joystick G818",
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/g8181.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/g8181.jpg",
+                "img2": "../img/products/g8182.jpg",
+                "img3": "../img/products/g8183.jpg",
+                "img4": "../img/products/g8181.jpg"
             },
             "price": 36,
             "qty": 4,
             "tmark": "Redragon",
-            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
+            "description": "Conexion por cable e inalambrico bluetooh USB; PC PS4 PS6; 197,8 g"
         },
         {
             "id": 12,
             "name": "Placa de video RTX 3090",
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/rtx30901.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/rtx30901.jpg",
+                "img2": "../img/products/rtx30902.jpg",
+                "img3": "../img/products/rtx30903.jpg",
+                "img4": "../img/products/rtx30904.jpg"
             },
             "price": 700,
             "qty": 6,
             "tmark": "Nvidia",
-            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
+            "description": "Nucleos CUDA de Nvidia 10496; 1.80 Ghz; 24 GB; GDDR6X"
         },
         {
             "id": 13,
             "name": "Placa de video GTX 1080ti",
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/1080ti1.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/1080ti1.jpg",
+                "img2": "../img/products/1080ti2.jpg",
+                "img3": "../img/products/1080ti3.jpg",
+                "img4": "../img/products/1080ti4.jpg"
             },
             "price": 242,
             "qty": 4,
             "tmark": "Nvidia",
-            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
+            "description": "Arquitectura Pascal; 11GB GDDR5X; 1582 MHz"
         },
         {
             "id": 14,
             "name": "Webcam C600",
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/c6001.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/c6001.jpg",
+                "img2": "../img/products/c6002.jpg",
+                "img3": "../img/products/c6003.jpg",
+                "img4": "../img/products/c6004.jpg"
             },
             "price": 25,
             "qty": 6,
             "tmark": "Logitech",
-            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
+            "description": "2.0 MP; HD 720p; microfono; 30fps"
         },
         {
             "id": 15,
             "name": "Parlante SP-HF180",
-            "img": "../img/products/f1.jpg",
+            "img": "../img/products/sp1.jpg",
             "sImg": {
-                "img1": "../img/products/f1.jpg",
-                "img2": "../img/products/f4.jpg",
-                "img3": "../img/products/f5.jpg",
-                "img4": "../img/products/f6.jpg"
+                "img1": "../img/products/sp1.jpg",
+                "img2": "../img/products/sp2.jpg",
+                "img3": "../img/products/sp3.jpg",
+                "img4": "../img/products/sp4.jpg"
             },
             "price": 13,
             "qty": 4,
             "tmark": "Genius",
-            "description": "Teclado mecanico; 37,5x15,5x4,3 cm; RGB chroma; Switch blue"
+            "description": "6W; USB; 3.5mm; 160Hz-18Khz"
         }
     ]
 }
