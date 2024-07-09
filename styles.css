@@ -610,7 +610,7 @@ footer .copyright {
 
 /* Inicio About Page */
 #page-header.about-header {
-    background-image: url("../img/about/banner.png");
+    background-image: url("img/about/banner.png");
 }
 #about-head {
     display: flex;
