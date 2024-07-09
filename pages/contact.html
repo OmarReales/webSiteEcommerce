@@ -12,6 +12,10 @@
     <!-- sweetAlert2  v11.12.2 inicio-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- sweetAlert2  v11.12.2 fin-->
+    <!-- emailJS inicio-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript"> emailjs.init('zE_nIjVNqXmi-WeV7')</script>
+    <!-- emailJS fin-->
 </head>
 <body>
     <section id="header">
@@ -65,14 +69,14 @@
         </div>
     </section>
     <section id="form-details">
-        <form action="">
+        <form id="form" action="">
             <span>Envianos un mensaje</span>
             <h2>Queremos despejar tus dudas</h2>
-            <input type="text" placeholder="Tu nombre">
-            <input type="email" placeholder="Tu email">
+            <input type="text" name="from_name" id="from_name" placeholder="Tu nombre">
+            <input type="text" name="email_id" id="email_id" placeholder="Tu email">
             <input type="text" placeholder="Asunto">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
-            <button class="normal">Enviar</button>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
+            <button type="submit" class="normal" id="form_button">Enviar</button>
         </form>
         <div class="people">
             <div>

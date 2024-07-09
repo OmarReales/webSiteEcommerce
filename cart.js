@@ -56,6 +56,17 @@ const renderShoppingCart = async () => {
             confirmButtonColor: "#088178"
         });
     }
+    const removeButtons = document.querySelectorAll(".remove");
+    removeButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const buttonId = e.currentTarget.id;
+            const index = shoppingCart.findIndex((product) => product.id == buttonId);
+            shoppingCart.splice(index, 1);
+            localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+            renderShoppingCart();
+        });
+    });
+    renderBadge();
 };
 
 renderShoppingCart();
