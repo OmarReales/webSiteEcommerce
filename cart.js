@@ -13,11 +13,11 @@ const renderShoppingCart = async () => {
         const itemPriceInDollars = item.price * dolarValue; // Multiplicar el precio por el valor del dólar
         const tr = document.createElement("tr");
         tr.innerHTML = `
-            <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+            <td><a href="#" id="${item.id}" class="remove"><i class="far fa-times-circle"></i></a></td>
             <td><img src="${item.img}" alt=""></td>
             <td>${item.name}</td>
             <td>${numberToCurrency(itemPriceInDollars)}</td>
-            <td><input type="number" value="${item.qty}"></td>
+            <td><input type="number" min="1" value="${item.qty}" readonly="readonly"></td>
             <td>${numberToCurrency(itemPriceInDollars * item.qty)}</td>
         `;
         total += itemPriceInDollars * item.qty;

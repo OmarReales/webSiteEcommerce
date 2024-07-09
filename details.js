@@ -43,10 +43,10 @@ async function renderDetails() {
                 <option>Negro</option>
                 <option>Gris</option>
             </select>
-            <input class="quantity" id="quantity" type="number" data-id="${productLocal.id}" value="1">
+            <input class="quantity" id="quantity" type="number" min="1" data-id="${productLocal.id}" value="1">
             <button class="normal addcart" id="${productLocal.id}">Añadir al carrito</button>
             <h4>Características</h4>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit doloribus alias voluptate quibusdam, excepturi ipsum deserunt corrupti numquam suscipit in ullam ipsam necessitatibus quasi sint vel, ad quaerat similique dolorem.</span>
+            <span>${productLocal.description}</span>
         </div>
     `;
 
