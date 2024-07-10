@@ -108,12 +108,12 @@
         {
             "id": 7,
             "name": "LG 27GL650F FULLHD 27\" 144Hz",
-            "img": "img/products/LG271441.jpg",
+            "img": "img/products/lg271441.jpg",
             "sImg": {
-                "img1": "img/products/LG271441.jpg",
-                "img2": "img/products/LG271442.jpg",
-                "img3": "img/products/LG271443.jpg",
-                "img4": "img/products/LG271444.jpg"
+                "img1": "img/products/lg271441.jpg",
+                "img2": "img/products/lg271442.jpg",
+                "img3": "img/products/lg271443.jpg",
+                "img4": "img/products/lg271444.jpg"
             },
             "price": 320,
             "qty": 4,
