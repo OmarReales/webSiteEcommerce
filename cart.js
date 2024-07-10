@@ -12,16 +12,16 @@ const renderShoppingCart = async () => {
         const item = items[i];
         const itemPriceInDollars = item.price * dolarValue; // Multiplicar el precio por el valor del dólar
         const tr = document.createElement("tr");
+        
+        // Asegúrate de que item.img solo tenga el nombre del archivo
+        const imgSrc = item.img.includes("img/products/") ? item.img.replace("img/products/", "") : item.img;
+        const imgPath = `../img/products/${imgSrc}`;
 
-        // Ajustar la ruta de la imagen
-        const imagePath = `../${item.img}`;
-
-        // Debugging: Verifica la ruta de la imagen
-        console.log('Imagen del producto:', imagePath);
-
+        console.log("Image Path:", imgPath); // Para verificar la ruta de la imagen en la consola
+        
         tr.innerHTML = `
             <td><a href="#" id="${item.id}" class="remove"><i class="far fa-times-circle"></i></a></td>
-            <td><img src="${imagePath}" alt="Imagen del producto ${item.name}"></td>
+            <td><img src="${imgPath}" alt="Imagen del producto"></td>
             <td>${item.name}</td>
             <td>${numberToCurrency(itemPriceInDollars)}</td>
             <td><input type="number" min="1" value="${item.qty}" readonly="readonly"></td>
@@ -30,7 +30,6 @@ const renderShoppingCart = async () => {
         total += itemPriceInDollars * item.qty;
         tbody.append(tr);
     }
-
     const totalItems = document.querySelector(".subtotal");
     const delivery = document.querySelector(".delivery");
     const totalPrice = document.querySelector(".total");
@@ -64,7 +63,6 @@ const renderShoppingCart = async () => {
             confirmButtonColor: "#088178"
         });
     }
-
     const removeButtons = document.querySelectorAll(".remove");
     removeButtons.forEach((button) => {
         button.addEventListener("click", (e) => {
