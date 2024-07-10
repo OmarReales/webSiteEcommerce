@@ -34,8 +34,8 @@ const renderShoppingCart = async () => {
     const delivery = document.querySelector(".delivery");
     const totalPrice = document.querySelector(".total");
     totalItems.innerHTML = numberToCurrency(total);
-    delivery.innerHTML = numberToCurrency(dolarValue); // costo entrega igual a un dolar
-    totalPrice.innerHTML = numberToCurrency(total + dolarValue); // Sumar el costo de entrega al total
+    delivery.innerHTML = numberToCurrency(dolarValue * 2); // costo entrega igual a un dolar * 2
+    totalPrice.innerHTML = numberToCurrency(total + (dolarValue * 2)); // Sumar el costo de entrega al total
 
     const purchase = document.querySelector("#purchase");
     if (total !== 0) {
