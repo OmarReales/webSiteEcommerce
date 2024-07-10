@@ -55,13 +55,13 @@ const renderShoppingCart = async () => {
             });
         });
     } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'No hay artículos en el carrito',
-            text: 'Por favor, agregue artículos al carrito',
-            footer: '<a href="../pages/shop.html">Seguir comprando</a>',
-            confirmButtonColor: "#088178"
-        });
+        // Swal.fire({
+        //     icon: 'error',
+        //     title: 'No hay artículos en el carrito',
+        //     text: 'Por favor, agregue artículos al carrito',
+        //     footer: '<a href="../pages/shop.html">Seguir comprando</a>',
+        //     confirmButtonColor: "#088178"
+        // });
     }
     const removeButtons = document.querySelectorAll(".remove");
     removeButtons.forEach((button) => {

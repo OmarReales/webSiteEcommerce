@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Site Ecommerce</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" type="image/jpg" href="../img/favicon.ico"/>
     <!-- fontawesome v6.5.1 inicio-->
@@ -38,17 +38,17 @@
     </section>
     <section id="page-header" class="about-header">
         <h2>Contactanos</h2>
-        <p>Despeja tus dudas!</p>
+        <p>¡Despeja tus dudas!</p>
     </section>
     <section id="contact-details" class="section-p1">
         <div class="details">
-            <span><p>Hablanos!</p></span>
-            <h2>Ven a uno de nuestros locales o cotactanos hoy mismo</h2>
+            <span><p>¡Háblanos!</p></span>
+            <h2>Ven a uno de nuestros locales o cotáctanos hoy mismo</h2>
             <h3>Casa principal</h3>
             <div>
                 <li>
                 <i class="fa-solid fa-map-pin"></i>
-                <p>Lorem ipsum dolor sit amet 123 Cordoba</p>
+                <p>Lorem ipsum dolor sit amet 123 Córdoba</p>
                 </li>
                 <li>
                 <i class="far fa-envelope"></i>
@@ -70,7 +70,7 @@
     </section>
     <section id="form-details">
         <form id="form" action="">
-            <span>Envianos un mensaje</span>
+            <span>Envíanos un mensaje</span>
             <h2>Queremos despejar tus dudas</h2>
             <input type="text" name="from_name" id="from_name" placeholder="Tu nombre">
             <input type="text" name="email_id" id="email_id" placeholder="Tu email">
@@ -81,15 +81,15 @@
         <div class="people">
             <div>
                 <img src="../img/people/1.png" alt="">
-                <p><span>Juan Perez</span> Lorem ipsum dolor sit <br>Phone: 123-456-7890 <br>Email: contact@tienda.com</p>
+                <p><span>Juan Pérez</span> Lorem ipsum dolor sit <br>Phone: 123-456-7890 <br>Email: contact@tienda.com</p>
             </div>
             <div>
                 <img src="../img/people/2.png" alt="">
-                <p><span>Pablo Perez</span> Lorem ipsum dolor sit <br>Phone: 123-456-7890 <br>Email: contact@tienda.com</p>
+                <p><span>Pablo Pérez</span> Lorem ipsum dolor sit <br>Phone: 123-456-7890 <br>Email: contact@tienda.com</p>
             </div>
             <div>
                 <img src="../img/people/3.png" alt="">
-                <p><span>Juana Perez</span> Lorem ipsum dolor sit <br>Phone: 123-456-7890 <br>Email: contact@tienda.com</p>
+                <p><span>Juana Pérez</span> Lorem ipsum dolor sit <br>Phone: 123-456-7890 <br>Email: contact@tienda.com</p>
             </div>
         </div>
     </section>
@@ -108,7 +108,7 @@
         <div class="col">
             <img class="logo" src="../img/logo.png" alt="">
             <h4>Contactos</h4>
-            <p><strong>Telefono:</strong> 123-456-7890</p>
+            <p><strong>Teléfono:</strong> 123-456-7890</p>
             <p><strong>Horario:</strong> 9:00 - 18:00, Lunes a viernes</p>
             <div class="follow">
                 <h4>Siguenos</h4>
@@ -122,18 +122,18 @@
             </div>
         </div>
         <div class="col">
-            <h4>Informacion</h4>
+            <h4>Información</h4>
             <a href="../pages/about.html">Sobre nosotros</a>
             <a href="#">Informacion de envios</a>
-            <a href="#">Politicas de privacidad</a>
+            <a href="#">Políticas de privacidad</a>
             <a href="#">Terminos y condiciones</a>
-            <a href="#">Contatanos</a>
+            <a href="#">Contáctanos</a>
         </div>
         <div class="col">
             <h4>Tu cuenta</h4>
-            <a href="#">Iniciar sesion</a>
+            <a href="#">Iniciar sesión</a>
             <a href="../pages/cart.html">Ver carro de compra</a>
-            <a href="#">Whishlist</a>
+            <a href="#">Wishlist</a>
             <a href="#">Seguir pedidos</a>
             <a href="#">Ayuda</a>
         </div>
@@ -154,33 +154,12 @@
 
     <script src="../index.js"></script>
     <script src="../details.js"></script>
+    <script src="../email.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
             renderBadge();
         });
-
-        const btn = document.getElementById('button');
-
-        document.getElementById('form')
-        .addEventListener('submit', function(event) {
-            event.preventDefault();
-
-        btn.value = 'Sending...';
-
-        const serviceID = 'default_service';
-        const templateID = 'template_0c8andm';
-
-        emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            btn.value = 'Send Email';
-            alert('Sent!');
-        }, (err) => {
-            btn.value = 'Send Email';
-            alert(JSON.stringify(err));
-        });
-    });
-
     </script>
 </body>
 </html>
