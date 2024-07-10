@@ -12,6 +12,7 @@ if (close) {
         nav.classList.remove('active');
     });
 }
+
 function numberToCurrency(n) {
     return new Intl.NumberFormat('en-US', {
         maximumFractionDigits: 2,
@@ -28,12 +29,13 @@ const getDolar = async () => {
 
 function getJsonPath() {
     const pathname = window.location.pathname;
+    console.log("Current Pathname: ", pathname);
     if (pathname.includes('index.html') || pathname === '/') {
         return 'products.json';
-    } else if (pathname.includes('pages/shop.html') || pathname.includes('pages/sproducts.html') || pathname.includes('pages/cart.html')) {
+    } else if (pathname.includes('pages/')) {
         return '../products.json';
     }
-    return '/products.json'; // Ruta por defecto
+    return 'products.json'; // Ruta por defecto
 }
 
 function getImagePath(img) {
@@ -49,8 +51,11 @@ function getImagePath(img) {
 const loadProducts = async () => {
     try {
         const dolarValue = await getDolar();
+        console.log("Dolar Value: ", dolarValue);
         const response = await fetch(getJsonPath());
+        console.log("Fetching JSON from: ", getJsonPath());
         const data = await response.json();
+        console.log("Product Data: ", data);
         
         const db = {
             items: data.items || [],
@@ -116,24 +121,3 @@ const loadProducts = async () => {
 };
 
 loadProducts();
-
-const btn = document.getElementById('button');
-
-document.getElementById('form')
-    .addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        btn.value = 'Sending...';
-
-        const serviceID = 'default_service';
-        const templateID = 'template_0c8andm';
-
-        emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            btn.value = 'Send Email';
-            alert('Sent!');
-        }, (err) => {
-            btn.value = 'Send Email';
-            alert(JSON.stringify(err));
-        });
-    });
