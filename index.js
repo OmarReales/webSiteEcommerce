@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    renderBadge();
-    renderDetails();
-});
-
-
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
@@ -107,16 +101,24 @@ const loadProducts = async () => {
 
                 productContainer.append(div);
 
+                // div.addEventListener('click', e => {
+                //     e.preventDefault();
+                //     localStorage.setItem("product", JSON.stringify(item));
+                //     const pathname = window.location.pathname;
+                //     if (pathname.includes("index.html") || pathname === "/") {
+                //         window.location.href = 'pages/sproduct.html';
+                //     } else {
+                //         window.location.href = 'sproduct.html';
+                //     }
+                // });
                 div.addEventListener('click', e => {
                     e.preventDefault();
                     localStorage.setItem("product", JSON.stringify(item));
                     const pathname = window.location.pathname;
-                    if (pathname.includes("index.html") || pathname === "/") {
-                        window.location.href = 'pages/sproduct.html';
-                    } else {
-                        window.location.href = 'sproduct.html';
-                    }
+                    const pathToSproduct = pathname.includes("index.html") || pathname === "/" ? 'pages/sproduct.html' : 'sproduct.html';
+                    window.location.href = pathToSproduct;
                 });
+                
             });
         }
         
