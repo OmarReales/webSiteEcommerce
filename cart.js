@@ -1,6 +1,6 @@
 const renderShoppingCart = async () => {
     const dolarValue = await getDolar(); // Obtener el valor del dólar blue
-    const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+    let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     const items = shoppingCart;
 
     let total = 0;
@@ -12,8 +12,7 @@ const renderShoppingCart = async () => {
         const item = items[i];
         const itemPriceInDollars = item.price * dolarValue; // Multiplicar el precio por el valor del dólar
         const tr = document.createElement("tr");
-        
-        // Asegúrate de que item.img solo tenga el nombre del archivo
+        // Obtener la ruta de la imagen
         const imgSrc = item.img.includes("img/products/") ? item.img.replace("img/products/", "") : item.img;
         const imgPath = `../img/products/${imgSrc}`;
 
@@ -30,19 +29,25 @@ const renderShoppingCart = async () => {
         total += itemPriceInDollars * item.qty;
         tbody.append(tr);
     }
+
     const totalItems = document.querySelector(".subtotal");
     const delivery = document.querySelector(".delivery");
     const totalPrice = document.querySelector(".total");
+    let deliveryCost = dolarValue * 3;
     totalItems.innerHTML = numberToCurrency(total);
-    delivery.innerHTML = numberToCurrency(dolarValue * 2); // costo entrega igual a un dolar * 2
-    totalPrice.innerHTML = numberToCurrency(total + (dolarValue * 2)); // Sumar el costo de entrega al total
+    delivery.innerHTML = numberToCurrency(deliveryCost); // costo entrega igual a un dolar * 3
+    totalPrice.innerHTML = numberToCurrency(total + deliveryCost); // Sumar el costo de entrega al total
+
+    const couponButton = document.querySelector("#apply-coupon");
+    couponButton.addEventListener("click", () => {
+        applyCoupon(total, deliveryCost);
+    });
 
     const purchase = document.querySelector("#purchase");
     if (total !== 0) {
         purchase.addEventListener("click", () => {
             localStorage.removeItem("shoppingCart");
             renderShoppingCart();
-            renderBadge();
             totalItems.innerHTML = numberToCurrency(0);
             delivery.innerHTML = numberToCurrency(0);
             totalPrice.innerHTML = numberToCurrency(0);
@@ -53,16 +58,12 @@ const renderShoppingCart = async () => {
                 footer: '<a href="../pages/shop.html">Seguir comprando</a>',
                 confirmButtonColor: "#088178"
             });
+            const couponInput = document.querySelector("#coupon-input");
+            couponInput.value = "";
+            renderBadge();
         });
-    } else {
-        // Swal.fire({
-        //     icon: 'error',
-        //     title: 'No hay artículos en el carrito',
-        //     text: 'Por favor, agregue artículos al carrito',
-        //     footer: '<a href="../pages/shop.html">Seguir comprando</a>',
-        //     confirmButtonColor: "#088178"
-        // });
     }
+
     const removeButtons = document.querySelectorAll(".remove");
     removeButtons.forEach((button) => {
         button.addEventListener("click", (e) => {
@@ -74,6 +75,43 @@ const renderShoppingCart = async () => {
         });
     });
     renderBadge();
+};
+
+const applyCoupon = (total, deliveryCost) => {
+    const couponInput = document.querySelector("#coupon-input");
+    const couponCode = couponInput.value.trim().toUpperCase();
+    const totalItems = document.querySelector(".subtotal");
+    const delivery = document.querySelector(".delivery");
+    const totalPrice = document.querySelector(".total");
+
+    if (couponCode === "DESCUENTO50") {
+        total = total * 0.5;
+        Swal.fire({
+            icon: "success",
+            title: "Cupón aplicado!",
+            text: "Se ha aplicado un 50% de descuento.",
+            confirmButtonColor: "#088178"
+        });
+    } else if (couponCode === "ENVIOGRATIS") {
+        deliveryCost = 0;
+        Swal.fire({
+            icon: "success",
+            title: "Cupón aplicado!",
+            text: "El envío es gratis.",
+            confirmButtonColor: "#088178"
+        });
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Cupón no válido",
+            text: "El código de cupón ingresado no es válido.",
+            confirmButtonColor: "#088178"
+        });
+    }
+
+    totalItems.innerHTML = numberToCurrency(total);
+    delivery.innerHTML = numberToCurrency(deliveryCost);
+    totalPrice.innerHTML = numberToCurrency(total + deliveryCost);
 };
 
 renderShoppingCart();
