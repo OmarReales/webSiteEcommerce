@@ -98,27 +98,20 @@ const loadProducts = async () => {
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                 `;
-
                 productContainer.append(div);
-
                 // div.addEventListener('click', e => {
                 //     e.preventDefault();
                 //     localStorage.setItem("product", JSON.stringify(item));
                 //     const pathname = window.location.pathname;
-                //     if (pathname.includes("index.html") || pathname === "/") {
-                //         window.location.href = 'pages/sproduct.html';
-                //     } else {
-                //         window.location.href = 'sproduct.html';
-                //     }
+                //     const pathToSproduct = pathname.includes("index.html") || pathname === "/" ? 'pages/sproduct.html' : 'sproduct.html';
+                //     window.location.href = pathToSproduct;
                 // });
                 div.addEventListener('click', e => {
                     e.preventDefault();
                     localStorage.setItem("product", JSON.stringify(item));
-                    const pathname = window.location.pathname;
-                    const pathToSproduct = pathname.includes("index.html") || pathname === "/" ? 'pages/sproduct.html' : 'sproduct.html';
+                    const pathToSproduct = `${window.location.origin}/websiteEcommerce/pages/sproduct.html`;
                     window.location.href = pathToSproduct;
                 });
-                
             });
         }
         
