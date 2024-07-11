@@ -58,7 +58,7 @@ const renderShoppingCart = async () => {
                 footer: '<a href="../pages/shop.html">Seguir comprando</a>',
                 confirmButtonColor: "#088178"
             }).then(() => {
-                window.location.reload();
+                window.location.reload(); // Recargar la página para actualizar el numero en el carrito
             })
             const couponInput = document.querySelector("#coupon-input");
             couponInput.value = "";
