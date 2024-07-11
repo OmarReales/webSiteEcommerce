@@ -57,7 +57,9 @@ const renderShoppingCart = async () => {
                 text: "Muchas gracias por elegirnos!",
                 footer: '<a href="../pages/shop.html">Seguir comprando</a>',
                 confirmButtonColor: "#088178"
-            });
+            }).then(() => {
+                window.location.reload();
+            })
             const couponInput = document.querySelector("#coupon-input");
             couponInput.value = "";
             renderBadge();

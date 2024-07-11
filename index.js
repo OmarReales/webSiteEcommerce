@@ -99,19 +99,27 @@ const loadProducts = async () => {
                     <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                 `;
                 productContainer.append(div);
-                // div.addEventListener('click', e => {
-                //     e.preventDefault();
-                //     localStorage.setItem("product", JSON.stringify(item));
-                //     const pathname = window.location.pathname;
-                //     const pathToSproduct = pathname.includes("index.html") || pathname === "/" ? 'pages/sproduct.html' : 'sproduct.html';
-                //     window.location.href = pathToSproduct;
-                // });
                 div.addEventListener('click', e => {
                     e.preventDefault();
                     localStorage.setItem("product", JSON.stringify(item));
-                    const pathToSproduct = `${window.location.origin}/websiteEcommerce/pages/sproduct.html`;
-                    window.location.href = pathToSproduct;
+                
+                    // Obtener el pathname actual
+                    const pathname = window.location.pathname;
+                
+                    // Construir la ruta base de acuerdo al pathname actual
+                    let basePath = window.location.origin;
+                
+                    // Verificar si estamos en el directorio 'websiteEcommerce'
+                    if (pathname.includes("/websiteEcommerce/")) {
+                        basePath += "/websiteEcommerce/pages/sproduct.html";
+                    } else {
+                        basePath += "/pages/sproduct.html";
+                    }
+                
+                    // Redireccionar a la página sproduct.html
+                    window.location.href = basePath;
                 });
+                
             });
         }
         
