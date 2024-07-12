@@ -19,13 +19,13 @@ styles.css: Hoja de estilos para el diseño del sitio web.
 
 cart.js: Gestiona la funcionalidad del carrito de compras y la aplicación de cupones.
 
-details.js: Controla la visualización de detalles de productos en la página sproduct·html.
+details.js: Controla la visualización de detalles de productos en la página sproduct.html.
 
 email.js: Maneja el envío de correos electrónicos a través de EmailJS.
 
 img/: Carpeta que contiene todas las imágenes utilizadas en el sitio web.
 
-pages/: Carpeta que contiene las páginas secundarias del sitio web como shop·html, sproduct.html, etc.
+pages/: Carpeta que contiene las páginas secundarias del sitio web como shop.html, sproduct.html, etc.
 
 
 Funcionalidades Principales
@@ -41,7 +41,7 @@ Carga Dinámica de Productos:
 
 Se utiliza fetch() para obtener datos del archivo products.json según la ruta actual.
 
-Se convierte el precio de los productos a la moneda USD utilizando el valor del dólar obtenido de https://dolarapi.com/v1/dolares/blue.
+Se convierte el precio de los productos multiplicando el valor del dolar en pesos ARS a la moneda USD utilizada en los productos utilizando el valor del dólar obtenido de https://dolarapi.com/v1/dolares/blue.
 
 Detalles del Producto:
 
