@@ -19,13 +19,13 @@ styles.css: Hoja de estilos para el diseño del sitio web.
 
 cart.js: Gestiona la funcionalidad del carrito de compras y la aplicación de cupones.
 
-details.js: Controla la visualización de detalles de productos en la página sproduct·html.
+details.js: Controla la visualización de detalles de productos en la página sproduct.html.
 
 email.js: Maneja el envío de correos electrónicos a través de EmailJS.
 
 img/: Carpeta que contiene todas las imágenes utilizadas en el sitio web.
 
-pages/: Carpeta que contiene las páginas secundarias del sitio web como shop·html, sproduct.html, etc.
+pages/: Carpeta que contiene las páginas secundarias del sitio web como shop.html, sproduct.html, etc.
 
 
 Funcionalidades Principales
