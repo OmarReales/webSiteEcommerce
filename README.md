@@ -41,7 +41,7 @@ Carga Dinámica de Productos:
 
 Se utiliza fetch() para obtener datos del archivo products.json según la ruta actual.
 
-Se convierte el precio de los productos a la moneda USD utilizando el valor del dólar obtenido de https://dolarapi.com/v1/dolares/blue.
+Se convierte el precio de los productos multiplicando el valor del dolar en pesos ARS a la moneda USD utilizada en los productos utilizando el valor del dólar obtenido de https://dolarapi.com/v1/dolares/blue.
 
 Detalles del Producto:
 
