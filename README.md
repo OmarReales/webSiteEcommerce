@@ -4,7 +4,7 @@
 ## Estructura de Archivos
 
 
-1. El proyecto está organizado en varios archivos y carpetas principales:
+- El proyecto está organizado en varios archivos y carpetas principales:
 
     index.html: Página principal del sitio web.
 
@@ -14,18 +14,14 @@
 
     styles.css: Hoja de estilos para el diseño del sitio web.
 
-    cart.js: Gestiona la funcionalidad del carrito de compras y la aplicación de cupones.
-
-    details.js: Controla la visualización de detalles de productos en la página sproduct.html.
-
-    email.js: Maneja el envío de correos electrónicos a través de EmailJS.
-
     img/: Carpeta que contiene todas las imágenes utilizadas en el sitio web.
 
     pages/: Carpeta que contiene las páginas secundarias del sitio web como shop.html, sproduct.html, etc.
 
+    JS/: Carpeta que contiene los arcivos javascript cart.js, email.js y details.js.
 
-2. Funcionalidades Principales
+
+## Funcionalidades Principales
 
 
 - Navegación del Menú en mobile:
@@ -44,8 +40,7 @@
 
     En la página sproduct.html, se muestran detalles específicos del producto seleccionado almacenado en localStorage.
 
-    Se muestra una imagen principal del producto con opciones de imágenes secundarias para visualización.
-Se calcula el precio total del producto considerando el valor del dólar actual.
+    Se muestra una imagen principal del producto con opciones de imágenes secundarias para visualización. Se calcula el precio total del producto considerando el valor del dólar actual.
 
 
 
@@ -67,7 +62,7 @@ Se calcula el precio total del producto considerando el valor del dólar actual.
     Muestra una confirmación visual al usuario después de enviar el mensaje.
 
 
-3. Consideraciones Finales
+## Consideraciones Finales
 
 
     Rutas Dinámicas: Las funciones getJsonPath() y getImagePath() ajustan dinámicamente las rutas de los archivos según la página actual.
