@@ -1,6 +1,3 @@
-# Documentación del Proyecto
-
-
 ## Estructura de Archivos
 
 
@@ -63,6 +60,5 @@
 
 
 ## Consideraciones Finales
-
 
     Rutas Dinámicas: Las funciones getJsonPath() y getImagePath() ajustan dinámicamente las rutas de los archivos según la página actual.
