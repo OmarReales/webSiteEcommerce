@@ -1,125 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" type="image/jpg" href="../img/favicon.ico"/>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/jpg" href="../img/favicon.ico" />
     <!-- fontawesome v6.5.1 inicio-->
-    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css />
+    <link rel="stylesheet"
+    href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
+    />
     <!-- fontawesome v6.5.1 fin-->
     <!-- sweetAlert2  v11.12.2 inicio-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- sweetAlert2  v11.12.2 fin-->
-</head>
-<body>
+  </head>
+  <body>
     <section id="header">
-        <a href="#"><img src="../img/logo.png" class="logo" alt=""></a>
-        <div>
-            <ul id="navbar">
-                <li><a href="../index.html">Home</a></li>
-                <li><a class="active" href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span class="badge" style="display: none;">0</span></a></li>
-                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
-            </ul>
-        </div>
-        <div id="mobile">
-            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-            <i id="bar" class="fas fa-outdent"></i>
-        </div>
+      <a href="#"><img src="../img/logo.png" class="logo" alt="" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="../index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"
+              ><i class="fa-solid fa-bag-shopping"></i
+              ><span class="badge" style="display: none">0</span></a
+            >
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
     </section>
     <section id="page-header">
-        <h2>Quédate en casa</h2>
-        <p>Ahorra más con descuentos exclusivos de hasta el 50%</p>
+      <h2>Quédate en casa</h2>
+      <p>Ahorra más con descuentos exclusivos de hasta el 50%</p>
     </section>
     <section id="product1" class="section-p1">
-        <div id="product-container" class="pro-container">
-            <div class="pro" onclick="window.location.href='sproduct.html';">
-                <img src="../img/products/f1.jpg" alt="" >
-                <div class="des">
-                    <span>Redragon</span>
-                    <h5>modelo gaming</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$8000</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+      <div id="product-container" class="pro-container">
+        <div class="pro" onclick="window.location.href='sproduct.html';">
+          <img src="../img/products/f1.jpg" alt="" />
+          <div class="des">
+            <span>Redragon</span>
+            <h5>modelo gaming</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            <!-- JS -->
+            <h4>$8000</h4>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
         </div>
+        <!-- JS -->
+      </div>
     </section>
     <section id="pagination" class="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
     </section>
     <section id="newsletter" class="section-p1 section-m1">
-        <div class="newstext">
-            <h4>Suscribete para obtener las mejores ofertas</h4>
-            <p>Reciba una actualización por mail sobre nuestros últimos productos y <span>ofertas especiales</span>.</p>
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Escribe tu mail">
-            <button class="normal">Suscribete</button>
-        </div>
+      <div class="newstext">
+        <h4>Suscribete para obtener las mejores ofertas</h4>
+        <p>
+          Reciba una actualización por mail sobre nuestros últimos productos y
+          <span>ofertas especiales</span>.
+        </p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Escribe tu mail" />
+        <button class="normal">Suscribete</button>
+      </div>
     </section>
     <footer class="section-p1">
-        <div class="col">
-            <img class="logo" src="../img/logo.png" alt="">
-            <h4>Contactos</h4>
-            <p><strong>Teléfono:</strong> 123-456-7890</p>
-            <p><strong>Horario:</strong> 9:00 - 18:00, Lunes a viernes</p>
-            <div class="follow">
-                <h4>Siguenos</h4>
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-pinterest-p"></i>
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </div>
+      <div class="col">
+        <img class="logo" src="../img/logo.png" alt="" />
+        <h4>Contactos</h4>
+        <p><strong>Teléfono:</strong> 123-456-7890</p>
+        <p><strong>Horario:</strong> 9:00 - 18:00, Lunes a viernes</p>
+        <div class="follow">
+          <h4>Siguenos</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
         </div>
-        <div class="col">
-            <h4>Información</h4>
-            <a href="../pages/about.html">Sobre nosotros</a>
-            <a href="#">Informacion de envios</a>
-            <a href="#">Políticas de privacidad</a>
-            <a href="#">Terminos y condiciones</a>
-            <a href="#">Contáctanos</a>
+      </div>
+      <div class="col">
+        <h4>Información</h4>
+        <a href="../pages/about.html">Sobre nosotros</a>
+        <a href="#">Informacion de envios</a>
+        <a href="#">Políticas de privacidad</a>
+        <a href="#">Terminos y condiciones</a>
+        <a href="#">Contáctanos</a>
+      </div>
+      <div class="col">
+        <h4>Tu cuenta</h4>
+        <a href="#">Iniciar sesión</a>
+        <a href="../pages/cart.html">Ver carro de compra</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Seguir pedidos</a>
+        <a href="#">Ayuda</a>
+      </div>
+      <div class="col install">
+        <h4>Instalar App</h4>
+        <p>Desde la Play Store o App Store</p>
+        <div class="row">
+          <img src="../img/pay/app.jpg" alt="" />
+          <img src="../img/pay/play.jpg" alt="" />
         </div>
-        <div class="col">
-            <h4>Tu cuenta</h4>
-            <a href="#">Iniciar sesión</a>
-            <a href="../pages/cart.html">Ver carro de compra</a>
-            <a href="#">Wishlist</a>
-            <a href="#">Seguir pedidos</a>
-            <a href="#">Ayuda</a>
-        </div>
-        <div class="col install">
-            <h4>Instalar App</h4>
-            <p>Desde la Play Store o App Store</p>
-            <div class="row">
-                <img src="../img/pay/app.jpg" alt="">
-                <img src="../img/pay/play.jpg" alt="">
-            </div>
-            <p>Metodos de pago</p>
-            <img src="../img/pay/pay.png" alt="">
-        </div>
-        <div class="copyright">
-            <p>© 2024 Tienda - Todos los derechos reservados</p>
-        </div>
+        <p>Metodos de pago</p>
+        <img src="../img/pay/pay.png" alt="" />
+      </div>
+      <div class="copyright">
+        <p>© 2024 Tienda - Todos los derechos reservados</p>
+      </div>
     </footer>
     <script src="../index.js"></script>
     <script src="../JS/details.js"></script>
-</body>
+  </body>
 </html>
