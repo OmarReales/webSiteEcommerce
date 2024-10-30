@@ -109,10 +109,21 @@ const loadProducts = async () => {
           // Construir la ruta base de acuerdo al pathname actual
           let basePath = window.location.origin;
 
-          // Verificar si estamos en el directorio 'websiteEcommerce'
-          if (pathname.includes("/website-ecommerce/")) {
+          // // Verificar si estamos en el directorio 'websiteEcommerce'
+          // if (pathname.includes("/website-ecommerce/")) {
+          //   basePath += "/website-ecommerce/pages/sproduct.html";
+          // } else {
+          //   basePath += "/pages/sproduct.html";
+          // }
+
+          // // Redireccionar a la página sproduct.html
+          // window.location.href = basePath;
+          // Detecta si estás en GitHub Pages usando `window.location.hostname`
+          if (window.location.hostname === "omarreales.github.io") {
+            // Si está en GitHub Pages, usa el directorio del repositorio
             basePath += "/website-ecommerce/pages/sproduct.html";
           } else {
+            // Si está en local
             basePath += "/pages/sproduct.html";
           }
 
